@@ -129,7 +129,7 @@ function closeListBoard() {
 var musicId = 0;
 
 // 后台音乐列表
-let musicData = [['洛春赋', '云汐'], ['Yesterday', 'Alok/Sofi Tukker'], ['江南烟雨色', '杨树人'], ['Vision pt.II', 'Vicetone']];
+let musicData = [['洛春赋', '云汐'], ['Yesterday', 'Alok/Sofi Tukker'], ['江南烟雨色', '杨树人'], ['Vision pt.II', 'Vicetone'], ['Let it be', 'The Beatles']];
 
 // 初始化音乐
 function initMusic() {
@@ -139,8 +139,8 @@ function initMusic() {
     audio.ondurationchange = function () {
         musicTitle.innerText = musicData[musicId][0];
         author.innerText = musicData[musicId][1];
-        recordImg.style.backgroundImage = "url('img/record"+musicId.toString()+".jpg')";
-        body.style.backgroundImage = "url('img/bg"+musicId.toString()+".png')";
+        recordImg.style.backgroundImage = "url('img/record" + musicId.toString() + ".jpg')";
+        body.style.backgroundImage = "url('img/bg" + musicId.toString() + ".png')";
         audioTime.innerText = transTime(audio.duration);
         // 重置进度条
         audio.currentTime = 0;
@@ -189,7 +189,7 @@ audio.onended = function () {
 skipForward.addEventListener('click', function (event) {
     musicId = musicId - 1;
     if (musicId < 0) {
-        musicId = 3;
+        musicId = 4;
     }
     initAndPlay();
 });
@@ -197,7 +197,7 @@ skipForward.addEventListener('click', function (event) {
 // 下一首
 skipBackward.addEventListener('click', function (event) {
     musicId = musicId + 1;
-    if (musicId > 3) {
+    if (musicId > 4) {
         musicId = 0;
     }
     initAndPlay();
@@ -247,6 +247,10 @@ document.getElementById("music2").addEventListener('click', function (event) {
 });
 document.getElementById("music3").addEventListener('click', function (event) {
     musicId = 3;
+    initAndPlay();
+});
+document.getElementById("music4").addEventListener('click', function (event) {
+    musicId = 4;
     initAndPlay();
 });
 
