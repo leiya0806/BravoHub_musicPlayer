@@ -7,7 +7,14 @@
     <title>BravoHub</title>
     <script type="text/javascript">
         function submitForm(){
-            document.loginForm.submit()
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("psswd").value.trim();
+            
+            if(username === "" || password === "") {
+                alert("Username or password missing!")
+            } else {
+                document.loginForm.submit()
+            }
         }
     </script>
 </head>
@@ -25,8 +32,8 @@
             <h2>Login</h2>
             <h5>If you dont have a account...<span>register here!</span></h5>
             <form name="loginForm" action="../index.html" method="POST">
-                <input type="text" class="username" placeholder="UserName" >
-                <input type="password" class="password" placeholder="Password">
+                <input id="username" type="text" class="username" placeholder="UserName" >
+                <input id="psswd" type="password" class="password" placeholder="Password">
                 <div class="login_fom_bottom">
                     <div>
                         <input type="checkbox" id="rememberme">
@@ -36,7 +43,6 @@
                 </div>
                 <input type="button" id="login_btn" onclick="submitForm();" value="Login"/>
             </form>
-
         </div>
     </div>
 </body>
