@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="loginstyles.css">
     <title>BravoHub</title>
+    <script type="text/javascript">
+        function submitForm(){
+            document.loginForm.submit()
+        }
+    </script>
 </head>
 <body>
     <div class="login_page_container">
         <div class="left_panel">
-            <h1>Welcome BravoHub</h1>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et est sed felis aliquet sollicitudin</h4>
+            <h1>Welcome to BravoHub</h1>
+            <h4>Let us to help you explore your journey</h4>
             <div class="social_logins">
                 <button>Facebook</button>
                 <button>Tiktok</button>
             </div>
         </div>
         <div class="right_panel">
-            <h1>Login</h1>
-            <h4>If you dont have a account...<span>register here!</span></h4>
-            <form>
-                <input type="text">
-                <input type="password">
+            <h2>Login</h2>
+            <h5>If you dont have a account...<span>register here!</span></h5>
+            <form name="loginForm" action="../index.html" method="POST">
+                <input type="text" class="username" placeholder="UserName" >
+                <input type="password" class="password" placeholder="Password">
                 <div class="login_fom_bottom">
                     <div>
                         <input type="checkbox" id="rememberme">
@@ -29,7 +34,7 @@
                     </div>
                     <span>forget password</span>
                 </div>
-                <button id="login_btn" onclick="submitForm();">Login</button>
+                <input type="button" id="login_btn" onclick="submitForm();" value="Login"/>
             </form>
 
         </div>

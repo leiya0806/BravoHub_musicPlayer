@@ -26,10 +26,36 @@ body {
 
 .left_panel {
     flex-grow: 3;
+    background-image: url('../img/preview.gif');
+    background-size: cover;
+    padding-left: 15px;
+}
+
+h1 {
+    font-size: 7vmax;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+h4 {
+    color: white;
 }
 
 .right_panel {
-    flex-grow: 1;
+    flex-grow: 7;
+    padding: 0px 28px;
+}
+
+.username {
+    border: 0;
+    border-bottom: 1px solid blueviolet;
+    margin-bottom: 26px;
+}
+
+.password{
+    border: 0;
+    border-bottom: 1px solid blueviolet;
 }
 
 form {
