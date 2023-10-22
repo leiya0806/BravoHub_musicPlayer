@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-size: cover;
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+}
+
+.login_page_container {
+    display: flex;
+    min-height: 100%;
+}
+
+.left_panel,
+.right_panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left_panel {
+    flex-grow: 3;
+}
+
+.right_panel {
+    flex-grow: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_fom_bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+button[id='login_btn'] {
+    margin-left: auto;
+}
